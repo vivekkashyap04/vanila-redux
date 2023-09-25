@@ -5,6 +5,7 @@ let increment = document.querySelector('.increment');
 let decrement = document.querySelector('.decrement');
 let reset = document.querySelector('.reset');
 const stepSelect = document.getElementById('step-select');
+const maxValue =  document.getElementById('max-select');
 
 // Initial state
 const initialState = {
@@ -18,7 +19,7 @@ const initialState = {
         case "decrement":
             return {...state, counter: state.counter - state.step}
         case "reset":
-            return {...state, counter: 0}
+            return {...state, counter: 0,step:1}
         case 'selectStep':
             return {...state, step:action.payload}    
         default:
@@ -34,6 +35,11 @@ const initialState = {
  stepSelect.addEventListener("change",() => {
     const selectedStep = parseInt(stepSelect.value, 10);
     store.dispatch({type:'selectStep',payload:selectedStep})
+ })
+
+ maxValue.addEventListener("change",() => {
+        const selectedmaxValue = parseInt(maxValue.value, 10);
+        store.dispatch({type:'selectStep',payload:selectedmaxValue})
  })
 
 increment.addEventListener('click' , () => {

@@ -27,16 +27,26 @@
 </head>
 <body>
     <h1>1</h1>
-    <label for="step-select">Select Step:</label>
-    <select id="step-select">
-      <option value="1">1</option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="15">15</option>
-    </select>
+    <div>
+        <label for="step-select">Select Step:</label>
+        <select id="step-select">
+          <option value="1">1</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+        </select>
+        <label for="max-select">Max Value:</label>
+        <select id="max-select">
+            <option value="1">1</option>
+          <option value="15">15</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+        </select>
+    </div>
+   
     <butoon class="increment button">increment</butoon>
     <butoon class="decrement button">decrement</butoon>
     <butoon class="reset button">reset</butoon>
-    <script src="./index.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
